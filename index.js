@@ -5,7 +5,7 @@ const cors = require('cors');
 
 dotenv.config();
 
-require("./config/passport")
+require("./config/google")
 
 const app = express();
 const PORT = process.env.PORT;

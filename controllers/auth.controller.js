@@ -32,7 +32,9 @@ const googleCallback = (req,res)=>{
     const refreshToken = generateRefreshToken(user)
     const accessToken = generateAccessToken(user)
 
-    res.json({refreshToken,accessToken})
+    res.redirect(
+  `http://localhost:5173/auth-success?accessToken=${accessToken}&refreshToken=${refreshToken}`
+)
 }
 
 module.exports = {register,logIn,refresh,googleCallback}

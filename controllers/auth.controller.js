@@ -33,8 +33,8 @@ const googleCallback = (req,res)=>{
     const accessToken = generateAccessToken(user)
 
     res.redirect(
-  `http://localhost:3000/auth-success?accessToken=${accessToken}&refreshToken=${refreshToken}`
-)
+  `${FRONTEND_URL}/auth-success?accessToken=${accessToken}&refreshToken=${refreshToken}`
+);
 }
 
 module.exports = {register,logIn,refresh,googleCallback}

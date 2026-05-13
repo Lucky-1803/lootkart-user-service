@@ -33,7 +33,7 @@ const googleCallback = (req,res)=>{
     const accessToken = generateAccessToken(user)
 
     res.redirect(
-  `${FRONTEND_URL}/auth-success?accessToken=${accessToken}&refreshToken=${refreshToken}`
+  `http://localhost:3000/auth-success?accessToken=${accessToken}&refreshToken=${refreshToken}`
 );
 }
 
